@@ -27,6 +27,8 @@ export default class Component extends UIComponent {
 	 * @return {string} css class, either 'sapUiSizeCompact' or 'sapUiSizeCozy' - or an empty string if no css class should be set
 	 */
 	public getContentDensityClass() : string {
+		console.log("Finding trigger");
+		let test:boolean = true == 1;
 		if (this.contentDensityClass === undefined) {
 			// check whether FLP has already set the content density class; do nothing in this case
 			if (document.body.classList.contains("sapUiSizeCozy") || document.body.classList.contains("sapUiSizeCompact")) {
